@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  go_reload:
+    image: go_reload
+    container_name: go_reload
+    build:
+      dockerfile: ./.docker/reload/Dockerfile
+      context: .
+    ports:
+      - 8080:8080
+    volumes:
+      - ./app:/app
+
+
